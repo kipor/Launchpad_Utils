@@ -1,0 +1,12 @@
+F:\ProjectAzeroth\LauncherUtils\src\Launchpad_LauncherUtil\ProjectAzeroth_LauncherUtil\bin\Debug\ProjectAzeroth_LauncherUtil.exe.config
+F:\ProjectAzeroth\LauncherUtils\src\Launchpad_LauncherUtil\ProjectAzeroth_LauncherUtil\obj\Debug\ProjectAzeroth_LauncherUtil.exe
+F:\ProjectAzeroth\LauncherUtils\src\Launchpad_LauncherUtil\ProjectAzeroth_LauncherUtil\obj\Debug\ProjectAzeroth_LauncherUtil.pdb
+F:\ProjectAzeroth\LauncherUtils\src\Launchpad_LauncherUtil\Launchpad_LauncherUtil\bin\Debug\ProjectAzeroth_LauncherUtil.exe.config
+F:\ProjectAzeroth\LauncherUtils\src\Launchpad_LauncherUtil\Launchpad_LauncherUtil\obj\Debug\ProjectAzeroth_LauncherUtil.exe
+F:\ProjectAzeroth\LauncherUtils\src\Launchpad_LauncherUtil\Launchpad_LauncherUtil\obj\Debug\ProjectAzeroth_LauncherUtil.pdb
+F:\ProjectAzeroth\LauncherUtils\src\Launchpad_LauncherUtil\Launchpad_LauncherUtil\bin\Debug\ProjectAzeroth_LauncherUtil.exe
+F:\ProjectAzeroth\LauncherUtils\src\Launchpad_LauncherUtil\Launchpad_LauncherUtil\bin\Debug\ProjectAzeroth_LauncherUtil.pdb
+F:\ProjectAzeroth\LauncherUtils\src\Launchpad_LauncherUtil\Launchpad_LauncherUtil\obj\Debug\Launchpad_LauncherUtil.csprojResolveAssemblyReference.cache
+F:\ProjectAzeroth\LauncherUtils\src\Launchpad_LauncherUtil\Launchpad_LauncherUtil\obj\Debug\ProjectAzeroth_LauncherUtil.Form1.resources
+F:\ProjectAzeroth\LauncherUtils\src\Launchpad_LauncherUtil\Launchpad_LauncherUtil\obj\Debug\ProjectAzeroth_LauncherUtil.Properties.Resources.resources
+F:\ProjectAzeroth\LauncherUtils\src\Launchpad_LauncherUtil\Launchpad_LauncherUtil\obj\Debug\Launchpad_LauncherUtil.csproj.GenerateResource.Cache
