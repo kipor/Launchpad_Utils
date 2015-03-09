@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ProjectAzeroth_LauncherUtil.Properties
+namespace Launchpad.LauncherUtil.Properties
 {
 
 
@@ -44,7 +44,7 @@ namespace ProjectAzeroth_LauncherUtil.Properties
             {
                 if ((resourceMan == null))
                 {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ProjectAzeroth_LauncherUtil.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Launchpad.LauncherUtil.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

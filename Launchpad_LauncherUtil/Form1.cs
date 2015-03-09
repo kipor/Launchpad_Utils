@@ -11,7 +11,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Security.Cryptography;
 
-namespace ProjectAzeroth_LauncherUtil
+namespace Launchpad.LauncherUtil
 {
     public partial class Form1 : Form
     {
@@ -81,7 +81,7 @@ namespace ProjectAzeroth_LauncherUtil
 
             if (result == DialogResult.OK)
             {
-                string manifestPath = String.Format(@"{0}\launcherManifest.txt", Directory.GetCurrentDirectory());
+				string manifestPath = String.Format(@"{0}{1}LauncherManifest.txt", Directory.GetCurrentDirectory(), Path.DirectorySeparatorChar);
 
                 if (File.Exists(manifestPath))
                 {

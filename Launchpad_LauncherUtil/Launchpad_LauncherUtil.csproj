@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -7,10 +7,12 @@
     <ProjectGuid>{BA9D77D3-1767-4D9C-80F3-409C52B03861}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ProjectAzeroth_LauncherUtil</RootNamespace>
+    <RootNamespace>Launchpad.LauncherUtil</RootNamespace>
     <AssemblyName>ProjectAzeroth_LauncherUtil</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -41,10 +43,23 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="gtk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
+      <Package>gtk-sharp-2.0</Package>
+    </Reference>
+    <Reference Include="gdk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
+      <Package>gtk-sharp-2.0</Package>
+    </Reference>
+    <Reference Include="Mono.Posix" />
+    <Reference Include="atk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
+      <Private>False</Private>
+      <Package>gtk-sharp-2.0</Package>
+    </Reference>
+    <Reference Include="INIFileParser">
+      <HintPath>..\..\Launchpad\packages\ini-parser.2.1.1\lib\INIFileParser.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Form1.cs">
@@ -76,13 +91,40 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="gtk-gui\gui.stetic">
+      <LogicalName>gui.stetic</LogicalName>
+    </EmbeddedResource>
+    <Compile Include="Handlers\ChecksHandler.cs" />
+    <Compile Include="Handlers\ManifestHandler.cs" />
+    <Compile Include="Handlers\ProfileHandler.cs" />
+    <Compile Include="gtk-gui\generated.cs" />
+    <Compile Include="Unix-UI\MainWindow.cs" />
+    <Compile Include="gtk-gui\Launchpad.LauncherUtil.MainWindow.cs" />
+    <Compile Include="Handlers\ConfigHandler.cs" />
+    <Compile Include="Unix-UI\Settings\SettingsDialog.cs" />
+    <Compile Include="gtk-gui\Launchpad.LauncherUtil.SettingsDialog.cs" />
+    <Compile Include="Unix-UI\GameUploadWizard\GameUploadWizard.cs" />
+    <Compile Include="gtk-gui\Launchpad.LauncherUtil.GameUploadWizard.cs" />
+    <Compile Include="Unix-UI\WizardPage\WizardPageWidget.cs" />
+    <Compile Include="gtk-gui\Launchpad.LauncherUtil.WizardPageWidget.cs" />
+    <Compile Include="Unix-UI\WizardPage\GameUpload\GameUpload_Metadata.cs" />
+    <Compile Include="gtk-gui\Launchpad.LauncherUtil.GameUpload_Metadata.cs" />
+    <Compile Include="Unix-UI\WizardPage\GameUpload\GameUploadWidget_Files.cs" />
+    <Compile Include="gtk-gui\Launchpad.LauncherUtil.GameUploadWidget_Files.cs" />
+    <Compile Include="Unix-UI\WizardPage\GameUpload\GameUploadWidget_Upload.cs" />
+    <Compile Include="gtk-gui\Launchpad.LauncherUtil.GameUploadWidget_Upload.cs" />
+    <Compile Include="Unix-UI\Settings\EditProfileDialog.cs" />
+    <Compile Include="gtk-gui\Launchpad.LauncherUtil.EditProfileDialog.cs" />
+    <Compile Include="Unix-UI\Settings\ProfileListDialog.cs" />
+    <Compile Include="gtk-gui\Launchpad.LauncherUtil.ProfileListDialog.cs" />
+    <Compile Include="Unix-UI\Dialogs\ManifestGenerationDialog.cs" />
+    <Compile Include="gtk-gui\Launchpad.LauncherUtil.ManifestGenerationDialog.cs" />
+    <EmbeddedResource Include="Icons8-Android-Industry-Engineering.ico">
+      <DeployService-UseProjectRelativePath>True</DeployService-UseProjectRelativePath>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Icons8-Android-Industry-Engineering.ico" />
-    <Content Include="PerfCenterCpl.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -92,4 +134,19 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  <ItemGroup>
+    <Folder Include="Unix-UI\" />
+    <Folder Include="Handlers\" />
+    <Folder Include="Unix-UI\Settings\" />
+    <Folder Include="Unix-UI\GameUploadWizard\" />
+    <Folder Include="Unix-UI\LauncherUploadWizard\" />
+    <Folder Include="Unix-UI\GameUpdateWizard\" />
+    <Folder Include="Unix-UI\WizardPage\" />
+    <Folder Include="Unix-UI\WizardPage\GameUpload\" />
+    <Folder Include="Unix-UI\WizardPage\GameUpdate\" />
+    <Folder Include="Unix-UI\WizardPage\LauncherUpload\" />
+    <Folder Include="Unix-UI\WizardPage\LauncherUpdate\" />
+    <Folder Include="Unix-UI\LauncherUpdateWizard\" />
+    <Folder Include="Unix-UI\Dialogs\" />
+  </ItemGroup>
 </Project>

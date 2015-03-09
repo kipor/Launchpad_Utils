@@ -1,4 +1,4 @@
-﻿namespace ProjectAzeroth_LauncherUtil
+﻿namespace Launchpad.LauncherUtil
 {
     partial class Form1
     {

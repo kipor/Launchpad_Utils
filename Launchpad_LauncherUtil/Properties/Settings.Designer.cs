@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ProjectAzeroth_LauncherUtil.Properties
+namespace Launchpad.LauncherUtil.Properties
 {
 
 
