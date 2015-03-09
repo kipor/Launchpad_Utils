@@ -109,9 +109,7 @@
     <Compile Include="gtk-gui\Launchpad.LauncherUtil.WizardPageWidget.cs" />
     <Compile Include="Unix-UI\WizardPage\GameUpload\GameUpload_Metadata.cs" />
     <Compile Include="gtk-gui\Launchpad.LauncherUtil.GameUpload_Metadata.cs" />
-    <Compile Include="Unix-UI\WizardPage\GameUpload\GameUploadWidget_Files.cs" />
     <Compile Include="gtk-gui\Launchpad.LauncherUtil.GameUploadWidget_Files.cs" />
-    <Compile Include="Unix-UI\WizardPage\GameUpload\GameUploadWidget_Upload.cs" />
     <Compile Include="gtk-gui\Launchpad.LauncherUtil.GameUploadWidget_Upload.cs" />
     <Compile Include="Unix-UI\Settings\EditProfileDialog.cs" />
     <Compile Include="gtk-gui\Launchpad.LauncherUtil.EditProfileDialog.cs" />
@@ -122,6 +120,10 @@
     <EmbeddedResource Include="Icons8-Android-Industry-Engineering.ico">
       <DeployService-UseProjectRelativePath>True</DeployService-UseProjectRelativePath>
     </EmbeddedResource>
+    <Compile Include="Unix-UI\WizardPage\GameUpload\GameUpload_Upload.cs" />
+    <Compile Include="Unix-UI\WizardPage\GameUpload\GameUpload_Profile.cs" />
+    <Compile Include="gtk-gui\Launchpad.LauncherUtil.GameUpload_Profile.cs" />
+    <Compile Include="Unix-UI\WizardPage\GameUpload\GameUpload_Files.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

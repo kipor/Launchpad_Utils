@@ -4,21 +4,20 @@ using Gtk;
 
 namespace Launchpad.LauncherUtil
 {
-	public partial class MainWindow : Gtk.Window
+	public partial class MainWindow : Window
 	{
 		public MainWindow () : 
-				base(Gtk.WindowType.Toplevel)
+				base(WindowType.Toplevel)
 		{
 			this.Build ();
 		}
 
 		protected void OnDeleteEvent (object sender, DeleteEventArgs a)
 		{
-			Application.Quit ();
-			a.RetVal = true;
+			Application.Quit ();	
 		}
 
-		protected void OnButtonGameUploadWizardClicked (object sender, EventArgs e)
+	 	protected void OnButtonGameUploadWizardClicked (object sender, EventArgs e)
 		{
 			GameUploadWizard uploadWizard = new GameUploadWizard ();
 			uploadWizard.Run ();
@@ -38,7 +37,7 @@ namespace Launchpad.LauncherUtil
 		}
 
 
-		protected void OnImportProfileActionActivated (object sender, EventArgs e)
+	 	protected void OnImportProfileActionActivated (object sender, EventArgs e)
 		{
 			//First, select and copy
 			FileChooserDialog dialog = new FileChooserDialog ("Choose a profile", 
@@ -64,23 +63,23 @@ namespace Launchpad.LauncherUtil
 
 					if(File.Exists(copyTarget))
 					{
-						MessageDialog completedDialog = new MessageDialog (
+						MessageDialog fileExistsDialog = new MessageDialog (
 							null, DialogFlags.Modal, 
 							MessageType.Info, 
 							ButtonsType.YesNo, 
 							"The selected profile already exists (or one with the same name). Overwrite?");
 
-						completedDialog.Modal = true;
-						completedDialog.TransientFor = this;
+						fileExistsDialog.Modal = true;
+						fileExistsDialog.TransientFor = this;
 
-						if((ResponseType)completedDialog.Run () == ResponseType.Yes)
+						if((ResponseType)fileExistsDialog.Run () == ResponseType.Yes)
 						{
 							File.Copy(dialog.Filename, copyTarget, true);
-							completedDialog.Destroy ();
+							fileExistsDialog.Destroy ();
 						}
 						else
 						{
-							completedDialog.Destroy();
+							fileExistsDialog.Destroy();
 						}
 					}
 					else

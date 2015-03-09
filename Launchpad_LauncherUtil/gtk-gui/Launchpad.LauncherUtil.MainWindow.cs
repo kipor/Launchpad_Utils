@@ -86,7 +86,7 @@ namespace Launchpad.LauncherUtil
 			this.Name = "Launchpad.LauncherUtil.MainWindow";
 			this.Title = global::Mono.Unix.Catalog.GetString ("Launchpad Utilities");
 			this.Icon = global::Gdk.Pixbuf.LoadFromResource ("Launchpad.LauncherUtil.Icons8-Android-Industry-Engineering.ico");
-			this.WindowPosition = ((global::Gtk.WindowPosition)(4));
+			this.WindowPosition = ((global::Gtk.WindowPosition)(3));
 			// Container child Launchpad.LauncherUtil.MainWindow.Gtk.Container+ContainerChild
 			this.vbox1 = new global::Gtk.VBox ();
 			this.vbox1.Name = "vbox1";

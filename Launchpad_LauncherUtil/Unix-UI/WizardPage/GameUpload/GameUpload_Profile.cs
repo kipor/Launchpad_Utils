@@ -3,9 +3,9 @@ using System;
 namespace Launchpad.LauncherUtil
 {
 	[System.ComponentModel.ToolboxItem(true)]
-	public partial class GameUploadWidget_Files : WizardPageWidget
+	public partial class GameUpload_Profile : WizardPageWidget
 	{
-		public GameUploadWidget_Files ()
+		public GameUpload_Profile ()
 		{
 			this.Build ();
 		}
